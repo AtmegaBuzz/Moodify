@@ -10,9 +10,11 @@ app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 token = ""
 
-
-
-@app.route('/',methods=["GET","POST"])
+songs = {
+    "Happy":"4PY9rbCQSo2JvGdgREogIe",
+    "Sad":"4YOfhHpjPB0tq29NPpDY3F",
+    "Surprise":"7vatYrf39uVaZ8G2cVtEik"
+}
 def home():
     if request.method=="POST":
        
@@ -27,20 +29,16 @@ def home():
             image.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             image_path = os.path.join(UPLOAD_FOLDER,filename)
             mood = run_classifier(image_path)
+            return redirect("/music",mood)
 
     return render_template('index.html')
 
 
-@app.route('/music',methods=["GET","POST"])
-def music():
-    pagetitle = "Music",
-    name = "swapnil"
-    hackathon = "make4thon"
-    link = "htpps://dasd"
+@app.route('/music/<mood>',methods=["GET","POST"])
+def music(mood):
+    
     context = {
-        "pagetitle":pagetitle,
-        "name":name,
-        "hackathon":hackathon
+        "mood":mood
     }
     return render_template('musicplayer.html',context=context)
 
