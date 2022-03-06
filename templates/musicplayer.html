@@ -22,13 +22,26 @@
         flex-direction: column;
         left: 50%;
       }
+
+    .heading-secondary {
+      background-image: linear-gradient(to right, #7ed56f, #28b485);
+      color: transparent;
+      -webkit-background-clip: text;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+    .heading-secondary:hover {
+      transform: skewx(15deg) skewy(2deg) scale(1.1);
+      text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+    }
+ 
+
       
 </style>
 
 <body>
     <div class="player">
-  
-
+          <h1 class="heading-secondary">Mood: {{context["mood_type"]}}</h1>
           <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/{{context['mood']}}?utm_source=generator" width="50%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>     
     </div>
      
