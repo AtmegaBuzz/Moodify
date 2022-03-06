@@ -21,9 +21,9 @@ songs = {
     'Happy':"4PY9rbCQSo2JvGdgREogIe",
     'Neutral':"3C7FXzgUwDq7hY68lW5B2d", 
     'Sad':"4YOfhHpjPB0tq29NPpDY3F", 
-    'Surprise':"7vatYrf39uVaZ8G2cVtEik"
+    'Surprise':"7vatYrf39uVaZ8G2cVtEik",
+    'Angry':"0l9dAmBrUJLylii66JOsHB"
 }
-
 
 def run_classifier(file_):
     current_working_directory = os.getcwd()
