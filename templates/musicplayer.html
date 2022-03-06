@@ -6,29 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{context["pagetitle"]}}</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/music.css')}}">
 </head>
 
-<style>
-    body {
-        background: rgb(238,174,202);
-        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-      }
-      
-      .player {
-        margin: auto;
-        margin-top: 25vh;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        left: 50%;
-      }
-      
-</style>
 
 <body>
     <div class="player">
-  
-
+          <h1 class="heading-secondary">Mood: {{context["mood_type"]}}</h1>
           <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/{{context['mood']}}?utm_source=generator" width="50%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>     
     </div>
      
