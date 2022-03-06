@@ -337,3 +337,35 @@ body {
 .submit:visited:after{
 	content:"ted"
 }
+
+/* heading css */
+.the-type {
+    display: flex;
+    justify-content: center;    
+    width: 100%;
+  }
+  .typeing {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    display: inline;
+    background: linear-gradient(
+      45deg,
+      rgb(0, 143, 104),
+      rgb(172, 51, 233),
+      rgb(250, 224, 66)
+    );
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    text-transform: capitalize;
+    border-right-style: solid;
+    border-width: 10px;
+    border-image: linear-gradient(
+        45deg,
+        rgb(0, 143, 104),
+        rgb(172, 51, 233),
+        rgb(250, 224, 66)
+      )
+      1;
+  }
+  
