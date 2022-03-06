@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,8 +11,9 @@
     body {
         background: rgb(238,174,202);
         background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-        
-      }
+    }
+
+     
     .root{
         margin: auto;
         width: 30%;
@@ -21,7 +22,7 @@
         align-items: center;
         flex-direction: column;
         left: 50%;
-
+        margin-top: 25vh;
         background: rgba( 255, 255, 255, 0.15 );
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur( 6px );
@@ -30,12 +31,25 @@
         border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
     
+    .logo {
+        font-size: 5vw;
+        font-weight: 900;
+        font-family: Arial;
+        color: white;
+        text-shadow: 2px 2px #000000;
+        margin: auto;
+    }
+
+    
 </style>
+
 <body>
+
     <div class="root">
+        <div class="logo"> moodify </div>
         <form action = "#" method = "post" enctype="multipart/form-data">  
             <input type="file" name="file" />  
-            <button type="submit">Upload image</button>
+            <button type="submit">Upload Image</button>
         </form>
     <div>
 
@@ -43,3 +57,5 @@
 </body>
 
 </html>
+
+
