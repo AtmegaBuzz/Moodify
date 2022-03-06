@@ -71,7 +71,7 @@ def home():
             image.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             image_path = os.path.join(UPLOAD_FOLDER,filename)
             mood = run_classifier(image_path)
-            print(mood)
+            
             # the first argument in url_for takes the function name, NOT the actual endpoint
             return redirect(url_for("music", mood=songs[mood],mood_type=mood))
 
