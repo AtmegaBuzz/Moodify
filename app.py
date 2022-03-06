@@ -52,7 +52,6 @@ def run_classifier(file_):
 
             prediction = classifier.predict(roi)[0]
             label=emotion_labels[prediction.argmax()]
-            print(label)
             return label
         
 
